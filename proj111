@@ -1,0 +1,11 @@
+import os
+import shutil
+from_dir = '/Users/sakinalalani/Downloads/'
+to_dir = '/Users/sakinalalani/Documents/document_files/'
+
+list_of_files = os.listdir(from_dir)
+print(list_of_files)
+
+for item in list_of_files:
+    filename, exten = os.path.splitext(item)
+    print(f'{item} will be moved to {to_dir}/{filename}.{exten}')
